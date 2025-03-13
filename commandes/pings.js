@@ -6,7 +6,7 @@ const os = require("os");
 const moment = require("moment-timezone");
 const conf = require(__dirname + "/../set");
 
-const VideoUrl = "https://files.catbox.moe/xptjq3.mp4"; // New audio URL
+const AudioUrl = "https://files.catbox.moe/lb0x7w.mp3"; // New audio URL
 const ThumbnailURL = "https://files.catbox.moe/o4f1bs.jpg"; // New image URL
 
 moment.tz.setDefault(`${conf.TZ}`);
@@ -30,19 +30,22 @@ zokou({ nomCom: "ping", categorie: "General" }, async (dest, zk, commandeOptions
             ptt: true, // Voice note form
             video: {URL:VideoUrl},
             contextInfo: {
-                sourceUrl: conf.GURL,
-                forwardingScore: 999,
+            sourceUrl: conf.GURL,
+          forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363295141350550@newsletter',
-              newsletterName: 'ALONE MD🦄',
+              newsletterJid: '120363302677217436@newsletter',
+              newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
-      externalAdReply: {
-          title: "Enjoy...",
-          body: "💫🫅CASEYRHODES-MD IS AT HIGH SPEED now",
-          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
+        externalAdReply: {
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          body: "Follow my channel for more updates",
+          thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
+          sourceUrl: conf.GURL,
           mediaType: 1,
-            renderLargerThumbnail: false
+            renderLargerThumbnail: true,
+
+          showAdAttribution: false
         }
       }
     }, { quoted: ms });
