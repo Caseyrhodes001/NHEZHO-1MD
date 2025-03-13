@@ -19,7 +19,7 @@ const getTimeAndDate = () => {
 };
 
 // Ping Command
-zokou({ nomCom: "ping1", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "ping", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms } = commandeOptions;
     const { time, date } = getTimeAndDate();
     const ping = Math.floor(Math.random() * 100) + 1; // Generate a random ping between 1ms - 100ms
@@ -31,7 +31,7 @@ zokou({ nomCom: "ping1", categorie: "General" }, async (dest, zk, commandeOption
             ptt: true, // Voice note form
             contextInfo: {
                 externalAdReply: {
-                    title: "🤖 BOT-TEST 🤖",
+                    title: "🤖 CASEYRHODES-MD🤖",
                     body: `🏓 *Pong* ${ping}ms\n📅 *Date:* ${date}\n⏰ *Time:* ${time}`,
                     thumbnailUrl: THUMBNAIL_URL,
                     mediaType: 1,
