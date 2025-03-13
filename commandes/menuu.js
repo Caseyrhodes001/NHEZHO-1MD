@@ -35,7 +35,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-  ╭━━━ 〔 •ＡＬＯＮＥ ~ ＭＤ• 〕━━━┈⊷♦ 
+  ╭━━━ 〔 •BOTTEST ~ ＭＤ• 〕━━━┈⊷♦ 
 ┃♦╭──♦───♦────♦─────♥
 ┃♦│ ❑ ▸  *𝙳𝚊𝚝𝚎*:┈⊷ ${date}
 ┃♦│ ❑ ▸  *𝚃𝚒𝚖𝚎 𝚗𝚘𝚠*: ┈⊷ ${temps}
@@ -55,7 +55,7 @@ const date = moment().format('DD/MM/YYYY');
     
 let menuMsg = `
 
- *ALONE MD CURIOUS COMMADS*`;
+ *CASEYRHODES MD CURIOUS COMMADS*`;
 
     for (const cat in coms) {
         menuMsg += ` ╭──────✣ *${cat}* ✣─────☹︎`;
@@ -67,7 +67,7 @@ let menuMsg = `
 ╰────────────···▸▸ \n`
     }
 
-    menuMsg += `> powered by TOPU TECH
+    menuMsg += `> powered by CASEYRHODES TECH
 `;
 
    var lien = mybotpic();
@@ -86,7 +86,7 @@ let menuMsg = `
         externalAdReply: {
           title: "Enjoy...",
           body: "❣️ CASEYRHODES-MD SWEET MENU❣️",
-          thumbnailUrl: "https://files.catbox.moe/eoc0y3.jpg",
+          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true,
@@ -116,7 +116,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         externalAdReply: {
           title: "Enjoy...",
           body: "❣️ALONE-MD SWEET MENU❣️",
-          thumbnailUrl: "https://files.catbox.moe/eoc0y3.jpg",
+          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true,
@@ -144,7 +144,7 @@ else {
         externalAdReply: {
           title: "Enjoy...",
           body: "❣️ALONE-MD SWEET MENU❣️",
-          thumbnailUrl: "https://files.catbox.moe/eoc0y3.jpg",
+          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true
