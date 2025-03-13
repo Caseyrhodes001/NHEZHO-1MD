@@ -40,7 +40,7 @@ async function loading(dest, zk) {
 }
 
 zokou({
-  nomCom: "test2",
+  nomCom: "test",
   aliases: ["alive", "testing"],
   categorie: "system",
   reaction: "⚔️"
