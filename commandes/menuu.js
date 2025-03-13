@@ -35,39 +35,39 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-  ╭━━━ 〔 •BOTTEST ~ ＭＤ• 〕━━━┈⊷♦ 
-┃♦╭──♦───♦────♦─────♥
-┃♦│ ❑ ▸  *𝙳𝚊𝚝𝚎*:┈⊷ ${date}
-┃♦│ ❑ ▸  *𝚃𝚒𝚖𝚎 𝚗𝚘𝚠*: ┈⊷ ${temps}
-┃♦│ ❑ ▸  *𝙿𝚛𝚎𝚏𝚒𝚡* :┈⊷ [  ${s.PREFIXE}  ]
-┃♦│ ❑ ▸  *𝙼𝚘𝚍𝚎* : ┈⊷ ${mode} mode
-┃♦│ ❑ ▸  *𝙿𝚕𝚞𝚐𝚒𝚗𝚜* :┈⊷ ${cm.length}
-┃♦│ ❑ ▸  *𝚁𝚊𝚖* :┈⊷ ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┃♦│ ❑ ▸  *𝚁𝚞𝚗𝚗𝚒𝚗𝚐 𝚘𝚗* : ┈⊷ ${os.platform()}
-┃♦│ ❑ ▸  *𝙾𝚠𝚗𝚎𝚛* : ┈⊷ ${s.OWNER_NAME}
-┃♦│ ❑ ▸  *ᴅᴇᴠᴇʟᴏᴘᴇʀ* : ┈⊷ Topu tech
-┃♦│ ❑ ▸  *ᴛɪᴍᴇᴢᴏɴᴇ* :┈⊷ ${s.TZ}
-┃♦╰───────────────♦
-╰━━━━━━━━━━━━━━━┈⊷♦
+╭━━━《 *𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃* 》━━━┈⊷
+┃❍╭──────────────
+┃❍│▸  *ᴅᴀᴛᴇ*: ${date}
+┃❍│▸  *ᴛɪᴍᴇ ɴᴏᴡ*: ${temps}
+┃❍│▸  *ᴘʀᴇғɪx* : [  ${s.PREFIXE}  ]
+┃❍┃▸  *ᴍᴏᴅᴇ* :  ${mode} mode
+┃❍┃▸  *ᴘʟᴜɢɪɴs* : ${cm.length}
+┃❍┃▸  *ʀᴀᴍ* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┃❍│▸  *ʀᴜɴɴɪɴɢ ᴏɴ* : ${os.platform()}
+┃❍│▸  *ᴏᴡɴᴇʀ* :  ${s.OWNER_NAME}
+┃❍│▸  *ᴅᴇᴠᴇʟᴏᴘᴇʀ* : ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ
+┃❍│▸  *ᴛɪᴍᴇᴢᴏɴᴇ* : ${s.TZ}
+┃❍╰───────────────
+╰━━━━━━━━━━━━━━━┈⊷
 
-> ALONE MD Cant be broken💔\n${readmore}`;
+> 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐓𝐄𝐂𝐇\n${readmore}`;
     
     
 let menuMsg = `
 
- *CASEYRHODES MD CURIOUS COMMADS*`;
+ *𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*`;
 
     for (const cat in coms) {
-        menuMsg += ` ╭──────✣ *${cat}* ✣─────☹︎`;
+        menuMsg += `╭──────✣ *${cat}* ✣─────︎⊷⊷`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-│♥│ ${cmd}`;
+│❍│ ${cmd}`;
         }
         menuMsg += `
 ╰────────────···▸▸ \n`
     }
 
-    menuMsg += `> powered by CASEYRHODES TECH
+    menuMsg += `> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ
 `;
 
    var lien = mybotpic();
@@ -80,13 +80,13 @@ let menuMsg = `
           forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363295141350550@newsletter',
-              newsletterName: 'ALONE Queen MD V²',
+              newsletterJid: '120363302677217436@newsletter',
+              newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
         externalAdReply: {
-          title: "Enjoy...",
-          body: "❣️ CASEYRHODES-MD SWEET MENU❣️",
-          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          body: "Follow my channel for more updates",
+          thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true,
@@ -110,13 +110,13 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
           forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363295141350550@newsletter',
-              newsletterName: 'ALONE Queen MD V²',
+              newsletterJid: '120363302677217436@newsletter',
+              newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
         externalAdReply: {
-          title: "Enjoy...",
-          body: "❣️ALONE-MD SWEET MENU❣️",
-          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          body: "Follow my channel for more updates",
+          thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true,
@@ -138,13 +138,13 @@ else {
           forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363295141350550@newsletter',
-              newsletterName: 'ALONE Queen MD V²',
+              newsletterJid: '120363302677217436@newsletter',
+              newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
         externalAdReply: {
-          title: "Enjoy...",
-          body: "❣️ALONE-MD SWEET MENU❣️",
-          thumbnailUrl: "https://files.catbox.moe/o4f1bs.jpg",
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          body: "Follow my channel for more updates",
+          thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true
