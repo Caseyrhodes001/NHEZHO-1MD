@@ -1,1 +1,233 @@
-function _0x28e8(){const _0x54c148=['30498uiqfZm','videos','length','song','https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E','axios','Please\x20provide\x20a\x20video\x20name.','Error\x20during\x20download\x20process:','916885OOnOoQ','27qJUnIV','Failed\x20to\x20retrieve\x20download\x20URL\x20from\x20all\x20sources.\x20Please\x20try\x20again\x20later.','318644KidVkQ','mp3','sendMessage','error','Download\x20failed\x20due\x20to\x20an\x20error:\x20','63665XFYCcC','201216Ppndzt','audio/mp4','yt-search','../framework/zokou','audio','&apikey=gifted-md','Search','No\x20video\x20found\x20for\x20the\x20specified\x20query.','3LAamjo','success','1098139ZMgYTL','result','https://velyn.vercel.app/api/downloader/ytmp3?url=','join','title','download_url','get','url','1971688RiFGVs','data'];_0x28e8=function(){return _0x54c148;};return _0x28e8();}function _0x1ff8(_0x598a62,_0x520ed4){const _0x28e87f=_0x28e8();return _0x1ff8=function(_0x1ff8d9,_0x3dd08a){_0x1ff8d9=_0x1ff8d9-0x174;let _0x2022f4=_0x28e87f[_0x1ff8d9];return _0x2022f4;},_0x1ff8(_0x598a62,_0x520ed4);}const _0x15d941=_0x1ff8;(function(_0x5317c8,_0x43520b){const _0x57f093=_0x1ff8,_0x1911e3=_0x5317c8();while(!![]){try{const _0x135b2a=-parseInt(_0x57f093(0x18c))/0x1+parseInt(_0x57f093(0x187))/0x2*(-parseInt(_0x57f093(0x195))/0x3)+-parseInt(_0x57f093(0x18d))/0x4+-parseInt(_0x57f093(0x184))/0x5+parseInt(_0x57f093(0x17c))/0x6+-parseInt(_0x57f093(0x197))/0x7+parseInt(_0x57f093(0x17a))/0x8*(parseInt(_0x57f093(0x185))/0x9);if(_0x135b2a===_0x43520b)break;else _0x1911e3['push'](_0x1911e3['shift']());}catch(_0x4383be){_0x1911e3['push'](_0x1911e3['shift']());}}}(_0x28e8,0x1ff69));const {zokou}=require(_0x15d941(0x190)),axios=require(_0x15d941(0x181)),ytSearch=require(_0x15d941(0x18f));zokou({'nomCom':'play','aliases':[_0x15d941(0x17f),'ytmp3',_0x15d941(0x191),_0x15d941(0x188)],'categorie':_0x15d941(0x193),'reaction':'💿'},async(_0x20dfc,_0x4a4d9c,_0x69ba0e)=>{const _0x49ca6f=_0x15d941,{arg:_0x3a4c51,ms:_0x46dbe8,repondre:_0x47a85b}=_0x69ba0e;if(!_0x3a4c51[0x0])return _0x47a85b(_0x49ca6f(0x182));const _0x5a6f78=_0x3a4c51[_0x49ca6f(0x175)]('\x20');try{const _0x467b49=await ytSearch(_0x5a6f78);if(!_0x467b49||!_0x467b49[_0x49ca6f(0x17d)][_0x49ca6f(0x17e)])return _0x47a85b(_0x49ca6f(0x194));const _0x3de348=_0x467b49[_0x49ca6f(0x17d)][0x0],_0x5784f0=_0x3de348[_0x49ca6f(0x179)];let _0x12672e,_0x25eb37,_0xd54595;const _0x4ebb99=async _0x2659eb=>{const _0x5446cf=_0x49ca6f;try{const _0x4f7016=await axios[_0x5446cf(0x178)](_0x2659eb);return _0x4f7016[_0x5446cf(0x17b)];}catch(_0x49321e){return console['error']('Error\x20fetching\x20data\x20from\x20API:',_0x49321e),{'success':![]};}};_0x12672e=await _0x4ebb99('https://velyn.vercel.app/api/downloader/ytmp3?url='+encodeURIComponent(_0x5784f0)+_0x49ca6f(0x192));_0x12672e[_0x49ca6f(0x196)]?(_0x25eb37=_0x12672e[_0x49ca6f(0x198)]['download_url'],_0xd54595=_0x12672e[_0x49ca6f(0x198)]):(_0x12672e=await _0x4ebb99('https://velyn.vercel.app/api/downloader/ytmp4?url='+encodeURIComponent(_0x5784f0)),_0x12672e[_0x49ca6f(0x196)]?(_0x25eb37=_0x12672e[_0x49ca6f(0x198)][_0x49ca6f(0x177)],_0xd54595=_0x12672e[_0x49ca6f(0x198)]):(_0x12672e=await _0x4ebb99(_0x49ca6f(0x174)+encodeURIComponent(_0x5784f0)),_0x12672e[_0x49ca6f(0x196)]&&(_0x25eb37=_0x12672e[_0x49ca6f(0x198)][_0x49ca6f(0x177)],_0xd54595=_0x12672e[_0x49ca6f(0x198)])));if(!_0x25eb37||!_0xd54595)return _0x47a85b(_0x49ca6f(0x186));const _0x57bf43={'audio':{'url':_0x25eb37},'mimetype':_0x49ca6f(0x18e),'contextInfo':{'externalAdReply':{'title':_0xd54595[_0x49ca6f(0x176)],'body':_0xd54595[_0x49ca6f(0x176)],'mediaType':0x1,'sourceUrl':_0x49ca6f(0x180),'thumbnailUrl':_0x3de348['thumbnail'],'renderLargerThumbnail':!![],'showAdAttribution':![]}}};await _0x4a4d9c[_0x49ca6f(0x189)](_0x20dfc,_0x57bf43,{'quoted':_0x46dbe8});}catch(_0x271348){return console[_0x49ca6f(0x18a)](_0x49ca6f(0x183),_0x271348),_0x47a85b(_0x49ca6f(0x18b)+(_0x271348['message']||_0x271348));}});
+const { zokou } = require("../framework/zokou");
+const axios = require('axios');
+const ytSearch = require('yt-search');
+const conf = require(__dirname + '/../set');
+
+// Define the command with aliases for play
+zokou({
+  nomCom: "play",
+  aliases: ["song", "playdoc", "audio", "mp3"],
+  categorie: "Search",
+  reaction: "👻"
+}, async (dest, zk, commandOptions) => {
+  const { arg, ms, repondre } = commandOptions;
+
+  // Check if a query is provided
+  if (!arg[0]) {
+    return repondre("Please provide a video name.");
+  }
+
+  const query = arg.join(" ");
+
+  try {
+    // Perform a YouTube search based on the query
+    const searchResults = await ytSearch(query);
+
+    // Check if any videos were found
+    if (!searchResults || !searchResults.videos.length) {
+      return repondre('No video found for the specified query.');
+    }
+
+    const firstVideo = searchResults.videos[0];
+    const videoUrl = firstVideo.url;
+
+    // Function to get download data from APIs
+    const getDownloadData = async (url) => {
+      try {
+        const response = await axios.get(url);
+        return response.data;
+      } catch (error) {
+        console.error('Error fetching data from API:', error);
+        return { success: false };
+      }
+    };
+
+    // List of APIs to try
+    const apis = [
+      `https://keith-api.vercel.app/download/dlmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://keith-api.vercel.app/download/dlmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.giftedtech.web.id/api/download/dlmp3?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
+      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
+    ];
+
+    let downloadData;
+    for (const api of apis) {
+      downloadData = await getDownloadData(api);
+      if (downloadData && downloadData.success) break;
+    }
+
+    // Check if a valid download URL was found
+    if (!downloadData || !downloadData.success) {
+      return repondre('Failed to retrieve download URL from all sources. 💔🥵Please try again later.');
+    }
+
+    const downloadUrl = downloadData.result.download_url;
+    const videoDetails = downloadData.result;
+
+    // Prepare the message payload with external ad details
+    const messagePayloads = [
+      {
+        audio: { url: downloadUrl },
+        mimetype: 'audio/mp4',
+        contextInfo: {
+          externalAdReply: {
+            title: videoDetails.title,
+            body: videoDetails.title,
+            mediaType: 1,
+            sourceUrl: conf.GURL,
+            thumbnailUrl: firstVideo.thumbnail,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+          },
+        },
+      },
+      {
+        document: { url: downloadUrl },
+        mimetype: 'audio/mpeg',
+        contextInfo: {
+          externalAdReply: {
+            title: videoDetails.title,
+            body: videoDetails.title,
+            mediaType: 1,
+            sourceUrl: conf.GURL,
+            thumbnailUrl: firstVideo.thumbnail,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+          },
+        },
+      },
+      {
+        document: { url: downloadUrl },
+        mimetype: 'audio/mp4',
+        contextInfo: {
+          externalAdReply: {
+            title: videoDetails.title,
+            body: videoDetails.title,
+            mediaType: 1,
+            sourceUrl: conf.GURL,
+            thumbnailUrl: firstVideo.thumbnail,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+          },
+        },
+      }
+    ];
+
+    // Send the download link to the user for each payload
+    for (const messagePayload of messagePayloads) {
+      await zk.sendMessage(dest, messagePayload, { quoted: ms });
+    }
+
+  } catch (error) {
+    console.error('Error during download process:', error);
+    return repondre(`Download failed due to an error: ${error.message || error}`);
+  }
+});
+
+// Define the command with aliases for video
+zokou({
+  nomCom: "video2",
+  aliases: ["videodoc", "film", "mp4"],
+  categorie: "Search",
+  reaction: "👻"
+}, async (dest, zk, commandOptions) => {
+  const { arg, ms, repondre } = commandOptions;
+
+  // Check if a query is provided
+  if (!arg[0]) {
+    return repondre("Please provide a video name.");
+  }
+
+  const query = arg.join(" ");
+
+  try {
+    // Perform a YouTube search based on the query
+    const searchResults = await ytSearch(query);
+
+    // Check if any videos were found
+    if (!searchResults || !searchResults.videos.length) {
+      return repondre('No video found for the specified query.');
+    }
+
+    const firstVideo = searchResults.videos[0];
+    const videoUrl = firstVideo.url;
+
+    // Function to get download data from APIs
+    const getDownloadData = async (url) => {
+      try {
+        const response = await axios.get(url);
+        return response.data;
+      } catch (error) {
+        console.error('Error fetching data from API:', error);
+        return { success: false };
+      }
+    };
+
+    // List of APIs to try
+    const apis = [
+      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
+      `https://www.dark-yasiya-api.site/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
+      `https://api.giftedtech.web.id/api/download/dlmp4?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
+      `https://api.dreaded.site/api/ytdl/video?url=${encodeURIComponent(videoUrl)}`
+    ];
+
+    let downloadData;
+    for (const api of apis) {
+      downloadData = await getDownloadData(api);
+      if (downloadData && downloadData.success) break;
+    }
+
+    // Check if a valid download URL was found
+    if (!downloadData || !downloadData.success) {
+      return repondre('Failed to retrieve download URL from all sources. Please try again later.');
+    }
+
+    const downloadUrl = downloadData.result.download_url;
+    const videoDetails = downloadData.result;
+
+    // Prepare the message payload with external ad details
+    const messagePayloads = [
+      {
+        video: { url: downloadUrl },
+        mimetype: 'video/mp4',
+        contextInfo: {
+          externalAdReply: {
+            title: videoDetails.title,
+            body: videoDetails.title,
+            mediaType: 1,
+            sourceUrl: conf.GURL,
+            thumbnailUrl: firstVideo.thumbnail,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+          },
+        },
+      },
+      {
+        document: { url: downloadUrl },
+        mimetype: 'video/mp4',
+        contextInfo: {
+          externalAdReply: {
+            title: videoDetails.title,
+            body: videoDetails.title,
+            mediaType: 1,
+            sourceUrl: conf.GURL,
+            thumbnailUrl: firstVideo.thumbnail,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+          },
+        },
+      }
+    ];
+
+    // Send the download link to the user
+    for (const messagePayload of messagePayloads) {
+      await zk.sendMessage(dest, messagePayload, { quoted: ms });
+    }
+
+  } catch (error) {
+    console.error('Error during download process:', error);
+    return repondre(`Download failed due to an error: ${error.message || error}`);
+  }
+});
