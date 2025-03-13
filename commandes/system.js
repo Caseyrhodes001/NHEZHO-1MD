@@ -43,7 +43,7 @@ zokou({
   nomCom: "test",
   aliases: ["alive", "testing"],
   categorie: "system",
-  reaction: "⚔️"
+  reaction: "🥳"
 }, async (dest, zk, commandeOptions) => {
   const { ms } = commandeOptions;
 
