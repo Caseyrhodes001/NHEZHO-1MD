@@ -84,7 +84,7 @@ let menuMsg = `
               newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
         externalAdReply: {
-          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
           thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
@@ -114,7 +114,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
               newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
         externalAdReply: {
-          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
           thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
@@ -142,7 +142,7 @@ else {
               newsletterName: '𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃',
               serverMessageId: 143},
         externalAdReply: {
-          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈𝐃𝐄𝐕𝐈𝐂𝐄",
+          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
           thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
