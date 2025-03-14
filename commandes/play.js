@@ -5,10 +5,10 @@ const conf = require(__dirname + '/../set');
 
 // Define the command with aliases for play
 zokou({
-  nomCom: "play1",
+  nomCom: "play",
   aliases: ["song", "playdoc", "audio", "mp3"],
   categorie: "Search",
-  reaction: "🎥"
+  reaction: "👻"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
 
@@ -44,11 +44,11 @@ zokou({
 
     // List of APIs to try
     const apis = [
-      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
+      `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(videoUrl)}`,
       `https://apis.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
       `https://www.dark-yasiya-api.site/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
       `https://api.giftedtech.web.id/api/download/dlmp3?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
-      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
+      `https://apis.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`
     ];
 
     let downloadData;
