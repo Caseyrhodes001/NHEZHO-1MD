@@ -44,11 +44,11 @@ zokou({
 
     // List of APIs to try
     const apis = [
-      `https://keith-api.vercel.app/download/dlmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://p.oceansaver.in/ajax/download.php?format=mp3&url=${encodeURIComponent(videoUrl)}`,
       `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
-      `https://keith-api.vercel.app/download/dlmp3?url=${encodeURIComponent(videoUrl)}`,
+      `https://kinchan.sytes.net/ytdl/search?url=${encodeURIComponent(videoUrl)}`,
       `https://api.giftedtech.web.id/api/download/dlmp3?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
-      `https://api.dreaded.site/api/ytdl/audio?url=${encodeURIComponent(videoUrl)}`
+      `https://kinchan.sytes.net/ytdl/downloader?url=${encodeURIComponent(videoUrl)}`
     ];
 
     let downloadData;
