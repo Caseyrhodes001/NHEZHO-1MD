@@ -116,7 +116,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         externalAdReply: {
           title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
-          thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
+          thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true,
@@ -144,7 +144,7 @@ else {
         externalAdReply: {
           title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
-          thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
+          thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
             renderLargerThumbnail: true
