@@ -399,7 +399,7 @@ let menuMsg = `
                 externalAdReply: {
                     title: "CASEYRHODES MD SURAH LIST",
                     body: "Live with God my friends you don't know your tomorrow",
-                    thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
+                    thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
                     sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                     mediaType: 1,
                     renderLargerThumbnail: true
