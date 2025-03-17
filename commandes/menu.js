@@ -115,7 +115,7 @@ let menuMsg = `
             }
         }, { quoted: mek });
     
-    }catch (e) {
+    } catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
         repondre("🥵🥵 Menu erreur " + e);
     }
@@ -144,8 +144,25 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         }
       }
     }, { quoted: ms });
-      }
-    catch (e) {
+    
+           // Send the audio file with context info
+        await conn.sendMessage(from, {
+            audio: { url: 'https://cdn.ironman.my.id/i/wp4a7x.mp4' },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363302677217436@newsletter',
+                    newsletterName: '☇ cαsєчrhσdєs suppσrt⃪🤖͎᪳᪳𝆺𝅥',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+    
+    } catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
         repondre("🥵🥵 Menu erreur " + e);
     }
@@ -173,6 +190,25 @@ else {
       }
     }, { quoted: ms });
     
-}
-
+           // Send the audio file with context info
+        await conn.sendMessage(from, {
+            audio: { url: 'https://cdn.ironman.my.id/i/wp4a7x.mp4' },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363302677217436@newsletter',
+                    newsletterName: '☇ cαsєчrhσdєs suppσrt⃪🤖͎᪳᪳𝆺𝅥',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+    
+    } catch (error) {
+        console.error("Error in repo command:", error);
+        reply("Sorry, something went wrong while fetching the repository information. Please try a 
+  }
 })
