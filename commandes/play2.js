@@ -27,7 +27,7 @@ async function uploadToCatbox(filePath) {
 }
 // Define the command with aliases for play
 zokou({
-  nomCom: "playx",
+  nomCom: "play",
   aliases: ["song", "playdoc", "audio", "mp3"],
   categorie: "download",
   reaction: "🎧"
