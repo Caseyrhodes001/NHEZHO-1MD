@@ -1,356 +1,59 @@
-const { zokou } = require("../framework/zokou");
-const axios = require('axios');
-const ytSearch = require('yt-search');
-const conf = require(__dirname + '/../set');
-const { Catbox } = require("node-catbox");
-const fs = require('fs-extra');
-const { downloadAndSaveMediaMessage } = require('@whiskeysockets/baileys');
-
-// Initialize Catbox
-const catbox = new Catbox();
-
-// Function to upload a file to Catbox and return the URL
-async function uploadToCatbox(filePath) {
-  if (!fs.existsSync(filePath)) {
-    throw new Error("File does not exist");
+const {
+  zokou
+} = require("../framework/zokou");
+const yts = require("yt-search");
+zokou({
+  'nomCom': "play1",
+  'categorie': "Download",
+  'reaction': '🪰'
+}, async (_0x1865cc, _0x52cb5d, _0x3ecbfa) => {
+  const {
+    ms: _0x4b29db,
+    repondre: _0x53a005,
+    arg: _0x256e4c
+  } = _0x3ecbfa;
+  if (!_0x256e4c[0]) {
+    _0x53a005("Please insert a song/video name.");
+    return;
   }
   try {
-    const uploadResult = await catbox.uploadFile({ path: filePath });
-    if (uploadResult) {
-      return uploadResult;
+    let _0x1a81ab = _0x256e4c.join(" ");
+    let _0x336257 = [];
+    const _0x484e5e = await yts(_0x1a81ab);
+    _0x336257 = _0x484e5e.videos;
+    if (_0x336257 && _0x336257.length > 0) {
+      const _0x3cf1db = _0x336257[0].url;
+      const _0x3650ad = await fetch("https://bandahealimaree-api-ytdl.hf.space/api/ytmp3?url=" + encodeURIComponent(_0x3cf1db) + "&apikey=" + "gifted");
+      const _0x161135 = await _0x3650ad.json();
+      if (_0x161135.status === 200 && _0x161135.success) {
+        const _0xbcbf5f = _0x161135.result.download_url;
+        const _0x426211 = {
+          'image': {
+            'url': _0x336257[0].thumbnail
+          },
+          'caption': "♻️𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 ♻️\n\n📌  *Title:* " + _0x336257[0].title + "\n🔍 *Quality:* 720p-HD\n⏳ *Duration:* " + _0x336257[0].timestamp + "\n👁️ *Viewers:* " + _0x336257[0].views + "\n🎭 *Uploaded:* " + _0x336257[0].ago + "\n⏳ *Artist:* " + _0x336257[0].author.name + "\n\n⦿ *Direct YtLink:* " + _0x3cf1db + "\n\nᴛᴀᴘ ᴏɴ ᴛʜᴇ ʟɪɴᴋ ʙᴇʟᴏᴡ ᴛᴏ ғᴏʟʟᴏᴡ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ\n> https://tinyurl.com/26kh6jss\n➠ᴍᴀᴅᴇ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ ᴛᴇᴀᴍ"
+        };
+        await _0x52cb5d.sendMessage(_0x1865cc, _0x426211, {
+          'quoted': _0x4b29db
+        });
+        await _0x52cb5d.sendMessage(_0x1865cc, {
+          'audio': {
+            'url': __0x28e8a6
+          },
+          'caption': "ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴍᴅ",
+          'mimetype': "audio/mp4"
+        }, {
+          'quoted': _0x4b29db
+        });
+        _0x53a005("♻️𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 ♻️.");
+      } else {
+        _0x53a005("Failed to download the video. Please try again later.");
+      }
     } else {
-      throw new Error("Error retrieving file link");
+      _0x53a005("No videos found.");
     }
-  } catch (error) {
-    throw new Error(String(error));
-  }
-}
-// Define the command with aliases for play
-zokou({
-  nomCom: "play",
-  aliases: ["song", "playdoc", "audio", "mp3"],
-  categorie: "download",
-  reaction: "🎧"
-}, async (dest, zk, commandOptions) => {
-  const { arg, ms, repondre } = commandOptions;
-
-  // Check if a query is provided
-  if (!arg[0]) {
-    return repondre("Please provide a song name.");
-  }
-
-  const query = arg.join(" ");
-
-  try {
-    // Perform a YouTube search based on the query
-    const searchResults = await ytSearch(query);
-
-    // Check if any videos were found
-    if (!searchResults || !searchResults.videos.length) {
-      return repondre('No song found for the specified query.');
-    }
-
-    const firstVideo = searchResults.videos[0];
-    const videoUrl = firstVideo.url;
-
-    // Function to get download data from APIs
-    const getDownloadData = async (url) => {
-      try {
-        const response = await axios.get(url);
-        return response.data;
-      } catch (error) {
-        console.error('Error fetching data from API:', error);
-        return { success: false };
-      }
-    };
-
-    // List of APIs to try
-    const apis = [
-      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://apis.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
-      `https://www.dark-yasiya-api.site/download/ytmp3?url=${encodeURIComponent(videoUrl)}`,
-      `https://apis.giftedtech.web.id/api/download/dlmp3?apikey=gifted&url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
-      `https://apis.giftedtech.web.id/api/download/dlmp3?apikey=gifted&url=${encodeURIComponent(videoUrl)}`
-    ];
-
-    let downloadData;
-    for (const api of apis) {
-      downloadData = await getDownloadData(api);
-      if (downloadData && downloadData.success) break;
-    }
-
-    // Check if a valid download URL was found
-    if (!downloadData || !downloadData.success) {
-      return repondre('Failed to retrieve download URL from all sources. Please try again later.');
-    }
-
-    const downloadUrl = downloadData.result.download_url;
-    const videoDetails = downloadData.result;
-
-    // Prepare the message payload with external ad details
-    const messagePayloads = [
-      {
-      caption: `\n*CASEYRHODES MD AUDIOS*\n
-╭┈┈┈⊷
-┊ *Made:* in kenya
-┊ *Quality:* High
-┊ *Powered:* by CASEYRHODES
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈⊷
-🌐 *Bot Repo:* https://github.com/caseyweb/NHEZHO-MD
-
-> regards caseyrhodes`,
-        audio: { url: downloadUrl },
-        mimetype: 'audio/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: conf.BOT,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      },
-      {
-      caption: `\n*CASEYRHODES MD AUDIOS*\n
-╭┈┈┈⊷
-┊ *Made:* in kenya
-┊ *Quality:* High
-┊ *Powered:* by CASEYRHODES
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈⊷
-🌐 *Bot Repo:* https://github.com/caseyweb/NHEZHO-MD
-
-> regards caseyrhodes`,
-        document: { url: downloadUrl },
-        mimetype: 'audio/mpeg',
-        contextInfo: {
-          externalAdReply: {
-            title: conf.BOT,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      },
-      {
-      caption: `\n*CASEYRHODES MD AUDIOS*\n
-╭┈┈┈⊷
-┊ *Made:* in KENYA 
-┊ *Quality:* High
-┊ *Powered:* by CASEYRHODES
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈⊷
-🌐 *Bot Repo:* https://github.com/caseyweb/NHEZHO-MD
-
-> regards  CASEYRHODES`,
-        document: { url: downloadUrl },
-        mimetype: 'audio/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: conf.BOT,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      }
-    ];
-
-    // Send the download link to the user for each payload
-    for (const messagePayload of messagePayloads) {
-      await zk.sendMessage(dest, messagePayload, { quoted: ms });
-    }
-
-  } catch (error) {
-    console.error('Error during download process:', error);
-    return repondre(`Download failed due to an error: ${error.message || error}`);
-  }
-});
-
-// Define the command with aliases for video
-zokou({
-  nomCom: "video5",
-  aliases: ["videodoc", "film", "mp4"],
-  categorie: "download",
-  reaction: "🎞️"
-}, async (dest, zk, commandOptions) => {
-  const { arg, ms, repondre } = commandOptions;
-
-  // Check if a query is provided
-  if (!arg[0]) {
-    return repondre("Please provide a video name.");
-  }
-
-  const query = arg.join(" ");
-
-  try {
-    // Perform a YouTube search based on the query
-    const searchResults = await ytSearch(query);
-
-    // Check if any videos were found
-    if (!searchResults || !searchResults.videos.length) {
-      return repondre('No video found for the specified query.');
-    }
-
-    const firstVideo = searchResults.videos[0];
-    const videoUrl = firstVideo.url;
-
-    // Function to get download data from APIs
-    const getDownloadData = async (url) => {
-      try {
-        const response = await axios.get(url);
-        return response.data;
-      } catch (error) {
-        console.error('Error fetching data from API:', error);
-        return { success: false };
-      }
-    };
-
-    // List of APIs to try
-    const apis = [
-      `https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://www.dark-yasiya-api.site/download/ytmp4?url=${encodeURIComponent(videoUrl)}`,
-      `https://api.giftedtech.web.id/api/download/dlmp4?url=${encodeURIComponent(videoUrl)}&apikey=gifted-md`,
-      `https://apis.giftedtech.web.id/api/download/dlmp3?apikey=gifted&url=${encodeURIComponent(videoUrl)}`
-    ];
-
-    let downloadData;
-    for (const api of apis) {
-      downloadData = await getDownloadData(api);
-      if (downloadData && downloadData.success) break;
-    }
-
-    // Check if a valid download URL was found
-    if (!downloadData || !downloadData.success) {
-      return repondre('Failed to retrieve download URL from all sources. Please try again later.');
-    }
-
-    const downloadUrl = downloadData.result.download_url;
-    const videoDetails = downloadData.result;
-
-    // Prepare the message payload with external ad details
-    const messagePayloads = [
-      {
-      caption: `\n*CASEYRHODES MD AUDIOS*\n
-╭┈┈┈⊷
-┊ *Made:* in KENYA 
-┊ *Quality:* High
-┊ *Powered:* by CASEYRHODES 
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈⊷
-🌐 *Bot Repo:* https://github.com/caseyweb/NHEZHO-MD
-
-> regards caseyrhodes`,
-        video: { url: downloadUrl },
-        mimetype: 'video/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: conf.BOT,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      },
-      {
-      caption: `\n*CASEYRHODES MD AUDIOS*\n
-╭┈┈┈⊷
-┊ *Made:* in KENYA
-┊ *Quality:* High
-┊ *Powered:* by CASEYRHODES 
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈⊷
-🌐 *Bot Repo:* https://github.com/caseyweb/NHEZHO-MD
-
-> regards caseyrhodes`,
-        document: { url: downloadUrl },
-        mimetype: 'video/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: conf.BOT,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      }
-    ];
-
-    // Send the download link to the user
-    for (const messagePayload of messagePayloads) {
-      await zk.sendMessage(dest, messagePayload, { quoted: ms });
-    }
-
-  } catch (error) {
-    console.error('Error during download process:', error);
-    return repondre(`Download failed due to an error: ${error.message || error}`);
-  }
-});
-
-
-// Command to upload image, video, or audio file
-zokou({
-  'nomCom': 'turl',       // Command to trigger the function
-  'categorie': "download", // Command category
-  'reaction': '👨🏿‍💻'    // Reaction to use on command
-}, async (groupId, client, context) => {
-  const { msgRepondu, repondre } = context;
-
-  // If no message (image/video/audio) is mentioned, prompt user
-  if (!msgRepondu) {
-    return repondre("Please mention an image, video, or audio.");
-  }
-
-  let mediaPath;
-
-  // Check if the message contains a video
-  if (msgRepondu.videoMessage) {
-    mediaPath = await client.downloadAndSaveMediaMessage(msgRepondu.videoMessage);
-  }
- else if (msgRepondu.gifMessage) {
-    mediaPath = await client.downloadAndSaveMediaMessage(msgRepondu.gifMessage);
-  }
- else if (msgRepondu.stickerMessage) {
-    mediaPath = await client.downloadAndSaveMediaMessage(msgRepondu.stickerMessage);
-  }
-else if (msgRepondu.documentMessage) {
-    mediaPath = await client.downloadAndSaveMediaMessage(msgRepondu.documentMessage);
-  }
-  // Check if the message contains an image
-  else if (msgRepondu.imageMessage) {
-    mediaPath = await client.downloadAndSaveMediaMessage(msgRepondu.imageMessage);
-  }
-  // Check if the message contains an audio file
-  else if (msgRepondu.audioMessage) {
-    mediaPath = await client.downloadAndSaveMediaMessage(msgRepondu.audioMessage);
-  } else {
-    // If no media (image, video, or audio) is found, prompt user
-    return repondre("Please mention an image, video, or audio.");
-  }
-
-  try {
-    // Upload the media to Catbox and get the URL
-    const fileUrl = await uploadToCatbox(mediaPath);
-
-    // Delete the local media file after upload
-    fs.unlinkSync(mediaPath);
-
-    // Respond with the URL of the uploaded file
-    repondre(fileUrl);
-  } catch (error) {
-    console.error("Error while creating your URL:", error);
-    repondre("Oops, there was an error.");
+  } catch (_0x4ccb17) {
+    console.error("Error from API:", _0x4ccb17);
+    _0x53a005("An error occurred while searching or downloading the video." + _0x4ccb17);
   }
 });
