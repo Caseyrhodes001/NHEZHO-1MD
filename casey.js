@@ -81,7 +81,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['BELTAH-MD', "safari", "1.0.0"],
+            browser: ['CASEYRHODES-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -132,7 +132,7 @@ function getCurrentDateTime() {
 setInterval(async () => {
     if (conf.AUTO_BIO === "yes") {
         const currentDateTime = getCurrentDateTime(); // Get the current date and time
-        const bioText = `👻 ᴄᴀsᴇʏʀʜᴏᴅᴇs x-ᴛᴇᴄʜ 👻 ɪs ᴏɴʟɪɴᴇ : ${currentDateTime}`; // Format the bio text
+        const bioText = `👻 ᴄᴀsᴇʏʀʜᴏᴅᴇs-ᴍᴅ 👻 ɪs ᴏɴʟɪɴᴇ : ${currentDateTime}`; // Format the bio text
         await zk.updateProfileStatus(bioText); // Update the bio
         console.log(`Updated Bio: ${bioText}`); // Log the updated bio
     }
@@ -147,13 +147,13 @@ setInterval(async () => {
 
     await zk.rejectCall(callId, callerId);
     await zk.sendMessage(callerId, {
-      text: "*sᴏʀʀʏ!! ɴᴏ ᴄᴀʟʟs ᴀʟʟᴏᴡᴇᴅ, ᴋɪɴᴅʟʏ ᴛᴇxᴛ.*\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ."
+      text: "*sᴏʀʀʏ!! ᴀᴍ ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴀɪ ᴀssɪsᴛᴀɴᴛ ᴍʏ ᴏᴡɴᴇʀ ᴄᴀɴɴᴏᴛ,ʀᴇᴄɪᴇᴠᴇ ᴄᴀʟʟs ɴᴏᴡ ᴋɪɴᴅʟʏ ʟᴇᴀᴠᴇ ᴀ ᴍᴇssᴀɢᴇ,ᴛʜᴀɴᴋ ʏᴏᴜ.*\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs sᴜᴘᴘᴏʀᴛ ᴛᴇᴀᴍ."
     });
   }
 });
 
         // Default auto-reply message
-let auto_reply_message = "ᴛʜᴇ ᴏᴡɴᴇʀ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ,,ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ. ᴡᴇ ᴡɪʟʟ ʀᴇsᴘᴏɴᴅ sᴏᴏɴ.\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ.";
+let auto_reply_message = "ʜɪ ᴀᴍ ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴍᴅ ᴀɪ ᴀssɪsᴛᴀɴᴛ ʜᴏᴡ ᴍᴀʏ ɪ ʜᴇʟᴘ ʏᴏᴜ,ᴛʏᴘᴇ .menu ᴛᴏ sᴇᴇ ᴍʏ ʟɪsᴛ ᴏғ ᴄᴏᴏʟ ᴄᴏᴍᴍᴀɴᴅs.\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴍᴅ sᴜᴘᴘᴏʀᴛ ᴛᴇᴀᴍ.";
 
 // Track contacts that have already received the auto-reply
 let repliedContacts = new Set();
@@ -221,7 +221,7 @@ function createNotification(deletedMessage) {
     }).format(new Date());
 
     let notification = `*[ ᴍᴇssᴀɢᴇ ᴅᴇʟᴇᴛɪᴏɴ ᴅᴇᴛᴇᴄᴛᴇᴅ ]*\n\n`;
-    notification += `*⌚Deletion Time:* ${timeInNairobi}\n`;
+    notification += `*🍀Deletion Time:* ${timeInNairobi}\n`;
     notification += `*👤Deleted By:* @${deletedBy.split('@')[0]}\n\n`;
 
     return notification;
@@ -325,7 +325,7 @@ zk.ev.on("messages.upsert", async (m) => {
                     if (deletedMessage.message.conversation) {
                         // Text message
                         await zk.sendMessage(remoteJid, {
-                            text: notification + `*📖Deleted Message:* ${deletedMessage.message.conversation}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ.`,
+                            text: notification + `*📖Deleted Message:* ${deletedMessage.message.conversation}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ  ᴄᴀsᴇʏʀʜᴏᴅᴇs sᴜᴘᴘᴏʀᴛ ᴛᴇᴀᴍ.`,
                             mentions: [deletedMessage.key.participant],
                         });
                     } else if (deletedMessage.message.imageMessage || 
@@ -424,7 +424,7 @@ if (conf.AUTO_REACT_STATUS === "yes") {
                         await zk.sendMessage(message.key.remoteJid, {
                             react: {
                                 key: message.key,
-                                text: "🩵",
+                                text: "🫅",
                             },
                         }, {
                             statusJidList: [message.key.participant, adams],
@@ -486,19 +486,19 @@ if (conf.AUTO_REACT_STATUS === "yes") {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '254111385747';
-            const dj2 = '254732297194';
-            const dj3 = "254748851027";
-            const luffy = '254112192119';
+            const dj = '254112192119';
+            const dj2 = '254112192119';
+            const dj3 = "254112192119";
+            const luffy = '254101022551';
             const sudo = await getAllSudoNumbers();
-            let goat = "254732297194";
+            let goat = "254112192119";
             const superUserNumbers = [servBot, goat, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
             const superUser = allAllowedNumbers.includes(auteurMessage);
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{CASEYRHODES MD}...[][]");
+            console.log("\t [][]...{caseyrhodes-Md}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message sent from : " + nomGroupe);
@@ -792,7 +792,7 @@ if (conf.ANTILINK === "yes") {
         
                                     if(msg === null || !msg ||msg === 'undefined') {console.log('Message not found') ; return } 
         
-                                await zk.sendMessage(idBot,{ image : { url : './media/deleted-message.jpg'},caption : `     𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 -𝐌𝐃 𝐃𝐄𝐋𝐄𝐓𝐄𝐃 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 \n Message from @${msg.key.participant.split('@')[0]}​\n 𝐓𝐇𝐄 𝐃𝐄𝐋𝐄𝐓𝐄𝐃 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐈𝐒 𝐇𝐄𝐑𝐄 👇` , mentions : [msg.key.participant]},)
+                                await zk.sendMessage(idBot,{ image : { url : './media/deleted-message.jpg'},caption : `      𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒-𝐌𝐃 𝐃𝐄𝐋𝐄𝐓𝐄𝐃 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 \n Message from @${msg.key.participant.split('@')[0]}​\n 𝐓𝐇𝐄 𝐃𝐄𝐋𝐄𝐓𝐄𝐃 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐈𝐒 𝐇𝐄𝐑𝐄 👇` , mentions : [msg.key.participant]},)
                                 .then( () => {
                                     zk.sendMessage(idBot,{forward : msg},{quoted : msg}) ;
                                 })
@@ -1186,7 +1186,7 @@ zk.ev.on('group-participants.update', async (group) => {
             }
 
             msg += `You might want to read the group Description to avoid getting removed...
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ..`;
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs sᴜᴘᴘᴏʀᴛ ᴛᴇᴀᴍ..`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -1314,29 +1314,29 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️CASEYRHODES MD  connecting in your account...");
+                console.log("ℹ️ caseyrhodes md connecting in your account...");
             }
             else if (connection === 'open') {await zk.groupAcceptInvite("FuH0Uhfx7ZaDB4nlVFysts");
             
             
             
-            
-            
-            
-                console.log("✅ CASEYRHODES MD  connected successfully☺️");
+
+
+
+                console.log("✅ Caseyrhodes Md connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log(" CASEYRHODES MD loading plugins😇\n\n");
+                console.log(" Caseyrhodes loading plugins😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des plugins ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
                             require(__dirname + "/commandes/" + fichier);
-                            console.log(fichier + " Loaded successfully by CASEYRHODES ✔️");
+                            console.log(fichier + " Loaded successfully by Caseyrhodes✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} could not be loaded for the following reasons : ${e}`);
@@ -1356,26 +1356,18 @@ zk.ev.on('group-participants.update', async (group) => {
                 else {
                     md = "undefined";
                 }
-                console.log("Popkid md successfully connected✅");
+                console.log("Caseyrhodes md successfully connected✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `*Hello👋, ${getGreeting()},*
-╭════⊷
-║ *CASEYRHODES MD is Connected*
-║    Prefix : [  ${prefixe} ]
-║    Mode : ${md} mode
-║    platform : Chrome Linux 
-║    Total Commands : ${evt.cm.length}
-╰═════════════════⊷
-
-╭───◇
-┃
-┃ *Thank you for choosing*                      
-┃  *CASEYRHODES TECH*
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ 👻 
-╰═════════════════⊷ `;
+                let cmsg = `
+    𝖼 ᴄᴏɴɴᴇᴄᴛᴇᴅ
+╭─•••••⪼
+┋ ☻ • ᴘʀᴇғɪx: *[ . ]*
+┋ ☻ • ᴍᴏᴅᴇ: *public*
+┋ ☻ •https://shorturl.at/q8ZuS
+╰─•••••⪼`;
                 await zk.sendMessage( zk.user.id, { text: cmsg });
                 }
             }
@@ -1389,7 +1381,7 @@ zk.ev.on('group-participants.update', async (group) => {
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
-                    console.log('connection error😞 ,, CASEYRHODES MD trying to reconnect... ');
+                    console.log('connection error😞 ,, caseyrhodes trying to reconnect... ');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
